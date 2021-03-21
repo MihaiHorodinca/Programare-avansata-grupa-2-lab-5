@@ -17,6 +17,8 @@ public class Main {
 
         firstCatalog.list();
 
+        firstCatalog.play(0);
+
         try{
             firstCatalog.save();
         }
@@ -34,5 +36,6 @@ public class Main {
             System.out.println(e.getMessage());
         }
 
+        secondCatalog.list();
     }
 }

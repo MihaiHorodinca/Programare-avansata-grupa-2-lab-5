@@ -68,6 +68,10 @@ public class Catalog implements Serializable {
 
         Catalog loadedCatalog = (Catalog) objectInputStream.readObject();
 
-        loadedCatalog.list();
+        this.name = loadedCatalog.name;
+        this.items.clear();
+        for (GenericItem item : loadedCatalog.items){
+            this.items.add(item);
+        }
     }
 }
